@@ -17,7 +17,7 @@ namespace CalculatorProgram
                 var num1 = Num1();
                 var operators = OperatorOnly();
                 var num2 = Num2();
-                var result = Result(num1, num2, operators);
+                Result(num1, num2, operators);
             }
             while (Console.ReadLine().ToUpper() == "Y");
             End();
@@ -27,12 +27,12 @@ namespace CalculatorProgram
         {
             Console.WriteLine("Do you want to continue? (Y = Yes, N = No) : ");
             string input = Console.ReadLine().ToUpper();
-                       
-            if(input == "Y")
+
+            if (input == "Y")
             {
                 Continue();
             }
-            else if(input == "N")
+            else if (input == "N")
             {
                 Console.WriteLine("Bye!");
             }
@@ -46,8 +46,7 @@ namespace CalculatorProgram
 
         public static double Num1()
         {
-            double num1 = 0;
-
+            double num1;
             try
             {
                 Console.Write("\nEnter first number : ");
@@ -63,7 +62,7 @@ namespace CalculatorProgram
 
         public static double Num2()
         {
-            double num2 = 0;
+            double num2;
             try
             {
                 Console.Write("Enter second number : ");
@@ -73,14 +72,14 @@ namespace CalculatorProgram
             {
                 Console.WriteLine("Enter numbers only.");
                 num2 = Num2();
-            }            
+            }
             return num2;
         }
 
         public static string OperatorOnly()
         {
             string operators;
-            try
+            //try
             {
                 Console.Write("Enter the operation(+ , - , * , /) : ");
                 operators = Console.ReadLine();
@@ -94,37 +93,14 @@ namespace CalculatorProgram
                 {
                     Console.WriteLine("Enter correct opertor.");
                     operators = OperatorOnly();
+                    return operators;
                 }
             }
-            catch
-            {
-                Console.WriteLine("Enter correct opertor.");
-                operators = OperatorOnly();
-            }
-
-            if (operators == "+")
-            {
-                return operators;
-            }
-            else if (operators == "-")
-            {
-                return operators;
-            }
-            else if (operators == "*")
-            {
-                return operators;
-            }
-            else if (operators == "/")
-            {
-                return operators;
-            }
-            return operators;
         }
 
         public static double Result(double num1, double num2, string operations)
         {
             double result = 0;
-
             if (operations == "+")
             {
                 result = num1 + num2;
@@ -139,18 +115,18 @@ namespace CalculatorProgram
             }
             else if (operations == "/")
             {
-                if (num2 == 0)
-                {
-                    Console.WriteLine("Second number should not be zero.");
-                    num2 = Num2();
-                    result = Result(num1, num2, operations);                    
-                }
-                else
-                {
+                if (num2 != 0)
                     result = num1 / num2;
-                }                
-            }else              
-            result = Result(num1, num2, operations);
+                while (num2 == 0)
+                {
+                    if (num2 == 0)
+                    {
+                        Console.WriteLine("Second number should not be zero.");
+                        num2 = Num2();                        
+                    }
+                   
+                }
+            }
             Console.WriteLine($"Result : {num1} {operations} {num2} = {result}.");
             return result;
         }
