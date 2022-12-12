@@ -1,0 +1,8 @@
+C:\Users\PreranaL\source\repos\CalculatorProgram\CalculatorProgram\bin\Debug\CalculatorProgram.exe.config
+C:\Users\PreranaL\source\repos\CalculatorProgram\CalculatorProgram\bin\Debug\CalculatorProgram.exe
+C:\Users\PreranaL\source\repos\CalculatorProgram\CalculatorProgram\bin\Debug\CalculatorProgram.pdb
+C:\Users\PreranaL\source\repos\CalculatorProgram\CalculatorProgram\obj\Debug\CalculatorProgram.csproj.AssemblyReference.cache
+C:\Users\PreranaL\source\repos\CalculatorProgram\CalculatorProgram\obj\Debug\CalculatorProgram.csproj.SuggestedBindingRedirects.cache
+C:\Users\PreranaL\source\repos\CalculatorProgram\CalculatorProgram\obj\Debug\CalculatorProgram.csproj.CoreCompileInputs.cache
+C:\Users\PreranaL\source\repos\CalculatorProgram\CalculatorProgram\obj\Debug\CalculatorProgram.exe
+C:\Users\PreranaL\source\repos\CalculatorProgram\CalculatorProgram\obj\Debug\CalculatorProgram.pdb
